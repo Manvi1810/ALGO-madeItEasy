@@ -1,0 +1,40 @@
+                                                         ***MERGE SORT***
+ 
+ MergeSort(A,p,q,r)                 //A is the array, p is the first element and r is the last element                                                               
+ {
+   if(p < r) 
+   { q = (p + r)/2;
+     MergeSort(A,p,q);
+     MergeSort(A,q+1,r);
+     Merge(A,p,q,r);
+     }
+  }
+ 
+ COMPLEXITY OF MERGESORT : T(N) = 2T(N/2) + O(N)
+                           By master's theorem :   T(N) = O(nlogn) = Worst case = Average Case = Best Case 
+ 
+ Merge(A,p,q,r)
+ {
+   n1 = q - p + 1;               
+   n2 = r - q;
+   create l[1....n1+1] and r[1....n2+2]
+   for i = 1 to n1
+          l[i] = A[p+i-1];
+   for j = 1 to n2
+          r[j] = A[q+j];
+   l[n1 + 1] = ∞
+   r[n2 + 1] = ∞
+   i = 1;
+   j = 1;
+   for k = p to r
+     if(l[i] <= r[i])
+          A[k] = l[i++];
+     else 
+          A[k] = r[j++];
+ }
+ 
+COMPLEXITY OF MERGE : O(N)
+
+
+ 
+ 
