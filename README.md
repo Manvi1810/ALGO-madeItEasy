@@ -3,7 +3,9 @@ ALGORITHMS represented in an easier manner to understand and remember.
 
 DIFFERENT TYPES OF ALGORITHMS 
 1.Sorting 
+
 2.Searching
+
 3.B-Tree
 4.RBTree
 5.Fibonacci Heap
