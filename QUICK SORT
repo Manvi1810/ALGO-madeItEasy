@@ -1,0 +1,34 @@
+                                                ********QUICK SORT****
+  QuickSort(A,l,h)                                                                                                                                                        
+  {
+     if(l<h) {
+               j = Partition(l,h);                                                                                                                                      
+               QuickSort(A,l,j);                                                                                                                                         
+               QuickSort(A,j+1,h);                                                                                                                                    
+               }
+}
+
+COMPLEXCITY OF QUICKSORT : Best case : O(nlogn) , Worst case : O(n^2) , Average Case : Ω(nlogn)
+
+
+ Partition(l,h)
+ pivot = A[l];
+ i = l , j = h;
+ while(i<j)
+ {
+    do{
+       i++;
+       }while(A[i]<=pivot);
+    do{
+       j++;
+       }while(A[i]>pivot);
+    if(i<j)
+      swap(a[i],a[j]);
+ }
+ swap(pivot,A[j]);
+ return j;
+ }
+ 
+ COMPLEXCITY OF PARTITION : O(n)
+ 
+               
